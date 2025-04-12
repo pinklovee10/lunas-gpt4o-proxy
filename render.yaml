@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: lunas-gpt4o-proxy
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    rootDir: .
