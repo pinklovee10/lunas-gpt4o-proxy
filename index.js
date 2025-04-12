@@ -3,7 +3,6 @@ const express = require("express");
 const fetch = require("node-fetch");
 const app = express();
 const PORT = process.env.PORT || 3000;
-require("dotenv").config();
 
 app.use(express.json());
 
