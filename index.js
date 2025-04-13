@@ -31,7 +31,8 @@ app.post("/chat", async (req, res) => {
     const data = await response.json();
     res.json(data);
   } catch (error) {
-    res.status(500).json({ error: "Failed to connect to OpenAI" });
+  console.error("OpenAI Error:", error);
+  res.status(500).json({ error: "Failed to connect to OpenAI", detail: error.message });
   }
 });
 
